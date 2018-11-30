@@ -15,7 +15,7 @@ require("./model/commodity.js");
 
 var dbURI = 'mongodb://localhost/aicongbang';
 
-mongoose.connect(dbURI);
+mongoose.connect(dbURI,{ useNewUrlParser: true });
 
 mongoose.connection.on('connected', function () {
   console.log('Mongoose connected to ' + dbURI);

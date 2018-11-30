@@ -9,22 +9,22 @@ var usersSchema = new Schema({
 	//密码
 	password: String,
 	//用户电话
-	userPhone:String,
+	userPhone: String,
 	//用户邮箱
-	userMail:String,
+	userMail: String,
 	//用户姓名
-	userName:String,
+	trueName: String,
 	//用户类型
-	userType:Number,
+	userType: Number,
 	//用户状态
-	state:String,
+	state: String,
 	//地址
-	userAdd:String,
+	userAdd: String,
 	//订单
 	// 商店
-	store:{
+	storeId: {
 		type: Schema.Types.ObjectId,
-        ref: "store"
+		ref: "store"
 	}
 });
 

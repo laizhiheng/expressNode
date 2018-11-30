@@ -42,7 +42,7 @@ var storeSchema = new Schema({
         ref: "serve"
     },
     // 门店管理员
-    users:{
+    usersId:{
         type: Schema.Types.ObjectId,
         ref: "users"
     }
