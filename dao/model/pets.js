@@ -21,7 +21,10 @@ var petsSchema = new Schema({
     // 价格
     petsPrice: Number,
     // 图片
-    petsImg: String,
+    petsImg: {
+        type: Schema.Types.ObjectId,
+        ref: "imgs"
+    },
     // 商店
     store:{
         type: Schema.Types.ObjectId,

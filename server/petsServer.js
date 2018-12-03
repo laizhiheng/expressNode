@@ -24,3 +24,8 @@ module.exports.petsListById = async (data) => {
 module.exports.removePets = async (data) => {
     return await removePets(data)
   }
+  //图片
+  module.exports.addImgs = async obj => {
+
+    return await addImgs(obj)
+}

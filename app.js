@@ -9,6 +9,9 @@ require("./dao/database.js")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//宠物
+var petsRouter = require('./routes/pets');
+var app = express();
 
 var app = express();
 
@@ -24,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//宠物
+app.use('/pets', petsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

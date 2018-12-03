@@ -19,8 +19,14 @@ module.exports.petsListByPage = async ({ curPage, eachPage }) => {
 }
 //新增宠物
 module.exports.addPets = async (data) => {
-    console.log(data)
-    return await mongoose.model("pets").create(data);
+
+    let dd= await mongoose.model("pets")
+    .create(data)
+    // console.log(dd)
+    return await mongoose.model("pets")
+    .find({_id:dd._id})
+    .populate( "petsImg" )
+
 }
 //宠物修改
 
@@ -39,6 +45,7 @@ module.exports.updateById = async ({ _id, petsName, petsClass, petsType, petsCol
                     petsName, petsClass, petsType, petsColor, petsDate,petsGender,petsCharacter,petsPrice, petsImg,store
                 }
             })
+            .populate("petsImg")
             .populate("store")
 }
 
@@ -51,4 +58,12 @@ module.exports.removePets = async(data)=>{
     // let a =await mongoose.model("store").find({pets:data._id})
     // await mongoose.model("store").remove({_id:a[0]._id})
    await mongoose.model("pets").remove({_id:data._id})
+}
+// 图片
+module.exports.addImgs = async (data) => {
+    // let data = await mongoose.model("imgs").create(msg);
+    // await mongoose.model("movies").updateOne({
+        console.log(data)
+    return await mongoose.model("imgs").create(data);
+      
 }
