@@ -1,12 +1,11 @@
 // 客户模型
 
 const mongoose = require("mongoose");
-var Schema = mongoose.Schema;
-
-var serveSchema = new Schema({
+//描述数据结构
+var serveSchema = new mongoose.Schema({
     // 服务名称
     serveName:String,
-    // 类别
+    // 服务类型
     serveType:String,
     // 排期
     serveSchedule:String,
@@ -17,15 +16,16 @@ var serveSchema = new Schema({
     // 耗时
     serveTime:String,
     // 服务等级
-    serveLevel:Number,
+    serveLevel:String,
     // 价格
-    servePrice:Number,
+    servePrice:String,
     // 商店
-    store:{
-        type: Schema.Types.ObjectId,
+    storeId:{
+        type: mongoose.Schema.Types.ObjectId,
         ref: "stores"
     }
 
-    
+
 });
-mongoose.model("serve", serveSchema, "serve");
+//名称 数据结构 集合
+mongoose.model("serves", serveSchema, "serves");

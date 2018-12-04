@@ -9,6 +9,8 @@ require("./dao/database.js")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//服务
+var severRouter = require('./routes/serve')
 //商品
 var commodityRouter = require('./routes/commodityRouter');
 //宠物
@@ -36,6 +38,8 @@ app.use('/users', usersRouter);
 app.use('/commodityRouter', commodityRouter);
 //宠物
 app.use('/pets', petsRouter);
+//服务
+app.use('/serveres', severRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
