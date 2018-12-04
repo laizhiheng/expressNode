@@ -12,6 +12,8 @@ require("./model/pets.js");
 // require("./model/petowners.js");
 // 商品杂物
 require("./model/commodity.js");
+// 图片
+require("./model/imgs.js");
 
 var dbURI = 'mongodb://localhost/aicongbang';
 
