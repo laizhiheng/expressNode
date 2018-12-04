@@ -24,7 +24,7 @@ var usersSchema = new Schema({
 	// 商店
 	store:{
 		type: Schema.Types.ObjectId,
-        ref: "store"
+        ref: "stores"
 	}
 });
 

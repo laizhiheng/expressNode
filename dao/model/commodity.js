@@ -33,11 +33,16 @@ var commoditySchema = new Schema({
     // 价格
     goodsPrice:Number,
     // 图片
-    goodsImg:String,
+    goodsImg:{
+        type: Schema.Types.ObjectId,
+        ref: "imgs"
+    },
+    //路径
+    goodsUrl:String,
     //商店
     store:{
         type: Schema.Types.ObjectId,
-        ref: "store"
+        ref: "stores"
     }
     
 });

@@ -12,10 +12,12 @@ require("./model/pets.js");
 // require("./model/petowners.js");
 // 商品杂物
 require("./model/commodity.js");
+//图片
+require("./model/img.js")
 
 var dbURI = 'mongodb://localhost/aicongbang';
 
-mongoose.connect(dbURI);
+mongoose.connect(dbURI,{ useNewUrlParser: true });
 
 mongoose.connection.on('connected', function () {
   console.log('Mongoose connected to ' + dbURI);

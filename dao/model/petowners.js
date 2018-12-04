@@ -22,7 +22,7 @@ const petSchema = new mongoose.Schema({
     //拥有的宠物
     memerpets: {
         type: Schema.Types.ObjectId,
-        ref: "pet"
+        ref: "pets"
     }
 })
 
