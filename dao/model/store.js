@@ -7,11 +7,15 @@ var storeSchema = new Schema({
     //营业执照
     shopName: String,
     //营业执照图片
-    shopLIcenceImg: {
-        // type: Schema.Types.ObjectId,
-        // ref: "imgs"
-        type:String
-    },
+    // shopLIcenceImg: {
+    //     // type: Schema.Types.ObjectId,
+    //     // ref: "imgs"
+    //     type:String
+    // },
+    shopLIcenceImg: [{
+		type: Schema.Types.ObjectId,
+		ref: "imgs"
+	}],
     //法人
     shopCorporate: String,
     //地址
@@ -19,11 +23,10 @@ var storeSchema = new Schema({
     //电话
     shopTel: String,
     //头图
-    shopImg: String,
-    // [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: "imgs"
-    // }],
+    shopImg: [{
+		type: Schema.Types.ObjectId,
+		ref: "imgs"
+	}],
     //商店等级
     grade: String,
     //商品
@@ -42,7 +45,7 @@ var storeSchema = new Schema({
         ref: "serve"
     },
     // 门店管理员
-    users:{
+    usersId:{
         type: Schema.Types.ObjectId,
         ref: "users"
     }
