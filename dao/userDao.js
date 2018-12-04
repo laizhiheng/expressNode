@@ -31,9 +31,6 @@ module.exports.manageLogin = async obj => {
 }
 // 图片
 module.exports.addImgs = async (data) => {
-    // let data = await mongoose.model("imgs").create(msg);
-    // await mongoose.model("movies").updateOne({
-        console.log(data)
     return await mongoose.model("imgs").create(data);
       
 }

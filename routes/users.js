@@ -25,7 +25,6 @@ router.post('/manageLogin', async function (req, res, next) {
 });
 // 图片
 router.post('/addImgs', async function (req, res, next) {
-  console.log(req.query)
   var{success,data}=await uploadFile(req,res,{
     // fileType:"/goodImgs",
     path:'./public/images'
